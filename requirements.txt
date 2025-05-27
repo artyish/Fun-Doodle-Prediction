@@ -6,4 +6,3 @@ opencv-python
 scikit-learn
 joblib
 tensorflow-cpu==2.13.0
-
