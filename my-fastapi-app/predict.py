@@ -1,9 +1,12 @@
 from tensorflow.keras.models import load_model
+import tensorflow as tf
 import cv2
 import numpy as np
 import os
 from sklearn.preprocessing import LabelEncoder
 import joblib
+
+_model = None
 
 def get_model():
     global _model
