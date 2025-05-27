@@ -8,16 +8,9 @@ import joblib
 
 _model = None
 
-def get_model():
-    global _model
-    if _model is None:
-        print("Loading model lazily...")
-        _model = tf.keras.models.load_model("main_model")
-    return _model
-
 def predict_doodle(img_array):
     encoder = joblib.load('label_encoder.joblib')
-    model = get_model()
+    model = tf.keras.models.load_model("mainmodel.h5")
     img_resized = cv2.resize(img_array, (96, 96))
     img_normalized = img_resized / 255.0
     img_array_to_use = img_normalized.reshape(1, 96, 96, 1)
