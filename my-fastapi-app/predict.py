@@ -10,7 +10,7 @@ _model = None
 
 def predict_doodle(img_array):
     encoder = joblib.load('label_encoder.joblib')
-    model = tf.keras.models.load_model("mainmodel.h5")
+    model = tf.keras.models.load_model("main_model")
     img_resized = cv2.resize(img_array, (96, 96))
     img_normalized = img_resized / 255.0
     img_array_to_use = img_normalized.reshape(1, 96, 96, 1)
