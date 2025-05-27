@@ -1,5 +1,5 @@
 from fastapi import FastAPI , File, UploadFile
-from predict import predict_doodle
+from .predict import predict_doodle
 from PIL import Image
 from io import BytesIO
 import numpy as np
