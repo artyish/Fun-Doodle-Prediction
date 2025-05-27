@@ -6,7 +6,7 @@ import joblib
 
 encoder = joblib.load('my-fastapi-app/label_encoder.joblib')
 
-model = load_model("main_model.h5")
+model = load_model("main_model_h5andkeras/main_model.h5")
 
 def predict_doodle(img_array):
     img_resized = cv2.resize(img_array, (96, 96))
