@@ -9,8 +9,7 @@ import joblib
 
 def predict_doodle(img_array):
     encoder = joblib.load('my-fastapi-app/label_encoder.joblib')
-    model_path = os.path.join(os.path.dirname(__file__), "mainmodel.h5")
-    model = load_model(model_path)
+    model = load_model('my-fastapi-app/mainmodel.h5')
     img_resized = cv2.resize(img_array, (96, 96))
     img_normalized = img_resized / 255.0
     img_array_to_use = img_normalized.reshape(1, 96, 96, 1)
