@@ -5,4 +5,5 @@ numpy
 opencv-python
 scikit-learn
 joblib
-tensorflow
+keras==2.11.0
+tensorflow==2.11.0
