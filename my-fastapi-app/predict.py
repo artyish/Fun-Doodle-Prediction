@@ -5,8 +5,8 @@ from sklearn.preprocessing import LabelEncoder
 import joblib
 
 encoder = joblib.load('my-fastapi-app/label_encoder.joblib')
-
-model = load_model("main_model_h5andkeras/main_model.h5")
+model_path = os.path.join(os.path.dirname(__file__), "main_model.h5")
+model = load_model(model_path)
 
 def predict_doodle(img_array):
     img_resized = cv2.resize(img_array, (96, 96))
