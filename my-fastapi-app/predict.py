@@ -4,9 +4,9 @@ import numpy as np
 from sklearn.preprocessing import LabelEncoder
 import joblib
 
-encoder = joblib.load('label_encoder.joblib')
+encoder = joblib.load('my-fastapi-app/label_encoder.joblib')
 
-model = load_model("main_model")
+model = load_model("my-fastapi-app/main_model")
 
 def predict_doodle(img_array):
     img_resized = cv2.resize(img_array, (96, 96))
